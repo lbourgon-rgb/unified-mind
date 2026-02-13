@@ -1,0 +1,19 @@
+{
+  "name": "unified-mind",
+  "version": "1.0.0",
+  "description": "Multi-entity vector memory MCP - Cloudflare Vectorize + R2",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "create-index": "wrangler vectorize create unified-mind-index --dimensions 768 --metric cosine",
+    "create-r2": "wrangler r2 bucket create unified-mind-storage",
+    "create-kv": "wrangler kv:namespace create CACHE",
+    "setup": "npm run create-index && npm run create-r2 && npm run create-kv"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.22.0"
+  }
+}

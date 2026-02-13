@@ -1,0 +1,31 @@
+name = "unified-mind"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "unified-mind-index"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "unified-mind-storage"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "YOUR_KV_NAMESPACE_ID_HERE"
+
+[vars]
+CORS_ORIGIN = "*"
+DEFAULT_ENTITY = "mind-1"
+MAX_CHUNK_TOKENS = "400"
+CHUNK_OVERLAP = "50"
+
+# After creating resources with:
+#   wrangler vectorize create unified-mind-index --dimensions 768 --metric cosine
+#   wrangler r2 bucket create unified-mind-storage
+#   wrangler kv:namespace create CACHE
+#
+# Update the KV namespace ID above and rename to wrangler.toml

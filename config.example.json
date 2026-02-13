@@ -1,0 +1,31 @@
+{
+  "entities": [
+    "mind-1",
+    "mind-2",
+    "shared"
+  ],
+  "defaultEntity": "mind-1",
+  "platforms": [
+    "claude",
+    "gpt",
+    "gemini",
+    "mistral",
+    "grok",
+    "discord",
+    "telegram",
+    "vscode",
+    "file"
+  ],
+  "memoryTypes": [
+    "conversation",
+    "document",
+    "note",
+    "reflection",
+    "journal"
+  ],
+  "platformToEntityMap": {
+    "gemini": "mind-2",
+    "claude": "mind-1",
+    "discord": "shared"
+  }
+}
